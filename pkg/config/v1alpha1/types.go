@@ -69,6 +69,7 @@ type NodeConfiguration struct {
 	Taints               []corev1.Taint                             `json:"taints,omitempty"`
 	KubeletConfiguration *kubeletconfigv1beta1.KubeletConfiguration `json:"kubelet,omitempty"`
 	KubeletExtraArgs     map[string]string                          `json:"kubeletExtraArgs,omitempty"`
+	KubeProxyExtraLabels map[string]string                          `json:"kubeProxyExtraLabels,omitempty"`
 }
 
 type EtcdConfiguration struct {

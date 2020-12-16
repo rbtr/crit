@@ -16,8 +16,8 @@ spec:
     metadata:
       labels:
         k8s-app: kube-proxy
-        {{- if .KubeProxyConfiguration.ExtraLabels }}
-{{ toYaml .KubeProxyConfiguration.ExtraLabels | indent 8 }}
+        {{- if .NodeConfiguration.KubeProxyExtraLabels }}
+{{ toYaml .NodeConfiguration.KubeProxyExtraLabels | indent 8 }}
         {{- end }}
     spec:
       priorityClassName: system-node-critical
